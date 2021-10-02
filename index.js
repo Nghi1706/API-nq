@@ -6,7 +6,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv"
 dotenv.config();
 const app = express();
-const PORT = process.env.PORT || 1706;
+const PORT = process.env.PORT || 8080;
 const URI = process.env.DATABASE_URL
 
 app.use(bodyParser.json());
