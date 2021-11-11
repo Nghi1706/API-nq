@@ -37,6 +37,20 @@ const schedule = new mongoose.Schema({
         default: 'new',
     },
 });
-
+const admin = new mongoose.Schema({
+    username: {
+        type: String,
+        required: true
+    },
+    mail: {
+        type: String,
+        required: true
+    },
+    password: {
+        type: String,
+        required: true,
+    },
+});
 export const PostModel = mongoose.model('Post', cost);
 export const ScheduleModel = mongoose.model('schedule', schedule);
+export const AdminModel = mongoose.model('admin', admin);
