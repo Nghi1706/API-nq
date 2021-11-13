@@ -9,6 +9,16 @@ export const getinfo = async (req, res) => {
     }
 
 }
+export const getinfo_one = async (req, res) => {
+    try {
+        const info = req.body;
+        const posts = await AdminModel.findOne(info);
+        res.status(200).json(posts);
+    } catch (err) {
+        res.status(500).json({ error: err });
+    }
+
+}
 
 export const createinfo = async (req, res) => {
     try {
